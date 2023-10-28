@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description"
+  content="Create unlimited running plans online for 5k, 10k, half-marathon and marathon distances for any amount of weeks. Save your plan and achieve your running goals." />
+  <meta property="og:site_name" content="Running Plan Generator" />
+  <meta property="og:url" content="https://runningplangenerator.com" />
+  <meta property="og:title" content="Running Plan Generator" />
+  <meta property="og:description"
+    content="Create unlimited running plans online for 5k, 10k, half-marathon and marathon distances for any amount of weeks. Save your plan and achieve your running goals." />
+  <meta property="og:image" content="https://runningplangenerator.com/assets/social-share.png" />
+  <meta property="og:image:url" content="https://runningplangenerator.com/assets/social-share.png" />
+  <meta property="og:image:secure_url" content="https://runningplangenerator.com/assets/social-share.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:description"
+  content="Create unlimited running plans online for 5k, 10k, half-marathon and marathon distances for any amount of weeks. Save your plan and achieve your running goals." />
+  <meta name="twitter:title" content="Running Plan Generator" />
+  <meta name="twitter:site" content="@markconroy" />
+  <meta name="twitter:creator" content="twitter.com/markconroy" />
+  <meta name="twitter:url" content="https://runningplangenerator.com" />
+  <meta name="twitter:image" content="https://runningplangenerator.com/assets/social-share.png" />
+  <link rel="stylesheet" href="/style.css">
+  <title>Running Plan Generator - create unlimited 5k, 10, half-marathon, and marathon running plans</title>
+</head>
+
+<body>
+  <div class="skip-to-content">
+    <a href="#main">Skip to main content</a>
+  </div>
+  <header class="header landmark">
+    <div class="container">
+      <div class="padding-horizontal">
+        <div class="header__inner landmark__inner">
+          <div class="landmark__branding">
+            <h1 class="landmark__title">Running<br> Plan<br> Generator</h1>
+          </div>
+          <div class="landmark__actions">
+            <a class="action-item action-item--pulse action-item--pulse-delay action-item--purchase" href="https://markie.eo.page/xrpd5"
+              target="_blank">
+              <span class="action-item__text">Join Mailing List</span>
+            </a>
+            <a class="action-item action-item--pulse action-item--pulse-delay action-item--purchase" href="#faqs">
+              <span class="action-item__text">FAQs</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main" id="main">
+
+    <!-- Begin Saved Plans -->
+    <div class="container">
+      <div class="padding-horizontal">
+        <div class="saved-plans">
+          <h2>Saved Plans</h2>
+          <div class="saved-plans__content">
+            <p>Your saved plans will appear here once we are live. <a href="https://markie.eo.page/xrpd5" target="_blank">Join the Mailing List</a> to get notified.</p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Saved Plans -->
+
+    <!-- Begin Choices -->
+    <div class="container">
+      <div class="padding-horizontal">
+        <h2>Create your training plan</h2>
+        <div class="choices">
+
+          <div class="choice choice--distance">
+            <label for="distance">Distance</label>
+            <select name="distance" id="distance">
+              <option value="5k" selected>5k</option>
+              <option value="10k">10k</option>
+              <option value="half-marathon">Half Marathon</option>
+              <option value="marathon">Marathon</option>
+            </select>
+          </div>
+
+          <div class="choice choice--weeks">
+            <label for="weeks">Weeks to Train</label>
+            <input type="number" id="weeks" value="12">
+          </div>
+          <div class="choice choice--create">
+            <button class="action-item" type="submit">Create Training Plan</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <!-- End Choices -->
+
+    <!-- Begin Plan -->
+    <div class="container">
+      <div class="padding-horizontal">
+
+        <div class="training-plan" id="training-plan">
+          <h2>Coming Soon ...</h2>
+          <p>Your training plan will appear here once we are live. <a href="https://markie.eo.page/xrpd5" target="_blank">Join the Mailing List</a> to get notified.</p>
+        </div>
+      </div>
+    </div>
+    <!-- End Plan -->
+
+    <!-- Run Types -->
+    <div class="container">
+      <div class="padding-horizontal">
+        <div id="run-types" class="run-types">
+          <h2>Run/Exercise Types</h2>
+          <div class="run-type">
+            <h3>Rest/Crosstrain</h3>
+            <div class="run" id="run-type-rest">
+              <h4>Rest</h4>
+              <p>Take a day off, let your body recover from a hard day of intervals or long running on the previous day.
+              </p>
+            </div>
+            <div class="run" id="run-type-rest-crosstrain">
+              <h4>Crosstrain</h4>
+              <p>Either:</p>
+              <ul>
+                <li>Take a day off, let your body recover from a hard day of intervals or long running on the previous
+                  day, or...</li>
+                <li>Do some light cross training, such as swimming, cycling, or yoga, or ...</li>
+                <li>Do some strength training, such as pushups, situps, or squats, or ...</li>
+                <li>... if you <em>must run</em> keep it a <em>very</em> easy recovery run.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="run-type">
+            <h3>Easy Runs</h3>
+            <div class="run" id="run-type-easy">
+              <h4>Easy Run</h4>
+              <p>Run at a comfortable pace. You should be able to hold a conversation.</p>
+            </div>
+          </div>
+
+          <div class="run-type">
+            <h3>Endurance Runs</h3>
+            <div class="run" id="run-type-tempo">
+              <h4>Tempo Run</h4>
+              <p>Run at a steady pace. You should be able to talk in short sentences.</p>
+            </div>
+            <div class="run" id="run-type-fartlek">
+              <h4>Fartlek</h4>
+              <p>Run at a steady pace. At random moments pick a point in the distance and run to it as fast as you can.
+              </p>
+            </div>
+            <div class="run" id="run-type-progression">
+              <h4>Progression</h4>
+              <p>Run at a steady pace, increasing your pace each kilometre. Your last km should be your fastest.</p>
+            </div>
+            <div class="run" id="run-type-long-intervals">
+              <h4>Long Intervals</h4>
+              <p>An intervals session, where each interval is run at about 75% of your intensity for a distance of at
+                least 1500m.</p>
+            </div>
+            <div class="run" id="run-type-threshold">
+              <h4>Threshold</h4>
+              <p>Run with a heart rate that is about 80% of your max heartrate. This run should feel "comfortably hard"
+                at all times. You should be able to hold this pace for a good amount of time.</p>
+            </div>
+          </div>
+
+          <div class="run-type">
+            <h3>High Intensity Runs</h3>
+            <div class="run" id="run-type-100m-intervals">
+              <h4>100m Intervals</h4>
+              <p>Run 100m at a very fast pace, then 200m at a very slow jog/walk. Repeat until you have reached the
+                distance set in your plan for this day. Remember each rep is 300m, so if you have 3km in today's plan,
+                that's 10 reps.</p>
+            </div>
+            <div class="run" id="run-type-400m-intervals">
+              <h4>400m Intervals</h4>
+              <p>Run 400m at a fast pace, then 200m at a very slow jog/walk. Repeat until you have reached the
+                distance set in your plan for this day. Remember each rep is 600m, so if you have 6k in today's plan,
+                that's 10 reps.</p>
+            </div>
+            <div class="run" id="run-type-800m-intervals">
+              <h4>800m Intervals</h4>
+              <p>Run 800m at a fast pace, then 200m at a very slow jog/walk. Repeat until you have reached the
+                distance set in your plan for this day. Remember each rep is 1000m, so if you have 10k in today's plan,
+                that's 10 reps.</p>
+            </div>
+            <div class="run" id="run-type-hill-repeats">
+              <h4>Hill Repeats</h4>
+              <p>Run up a hill at a fast pace, then jog/walk back down. Repeat until you have reached the
+                distance set in your plan for this day.</p>
+            </div>
+          </div>
+
+          <div class="run-type">
+            <h3>Long Runs</h3>
+            <div class="run" id="run-type-long-run">
+              <h4>Long Run</h4>
+              <p>The same as an easy run: run at a comfortable pace. You should be able to hold a conversation.</p>
+            </div>
+            <div class="run" id="run-type-long-run-progression">
+              <h4>Long Run (Progression)</h4>
+              <p>Start your run at a slow pace, increasing the pace for each km very slightly. Your last km should be
+                your
+                fastest.</p>
+            </div>
+            <div class="run" id="run-type-long-run-sprint-finish">
+              <h4>Long Run (Sprint Finish)</h4>
+              <p>Run at a comfortable pace, but for the last 500m, run as fast as you can. Pretend you are finishing a
+                race, and aiming for a personal best.</p>
+            </div>
+            <div class="run" id="run-type-long-run-race-pace">
+              <h4>Long Run (Race Pace)</h4>
+              <p>This is the same as any the basic long run, but also build some moments of race pace in to it.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Run Types -->
+
+    <!-- Begin FAQs -->
+    <div class="container">
+      <div class="padding-horizontal">
+        <div id="faqs" class="faqs">
+          <h2>FAQs</h2>
+          <div class="faq">
+            <h3>What is the Running Plan Generator?</h3>
+            <p>The Running Plan Generator is a tool to help you create a running training plan. It will generate a plan
+              for you based on the distance you wish to run, and the number of weeks you have to train.</p>
+          </div>
+          <div class="faq">
+            <h3>How is this any different to other plans I see on the internet?</h3>
+            <p>With other plans, everyone gets the exact same plan. With the running plan generator, you get a new plan each time you hit the generate button.</p>
+            <p>Also, most other plans stipulate how long you have to train for - 12 weeks, 16 weeks, etc. But it's often the case where you see a race you want to enter but it's an odd number of weeks away, such as 17 weeks. For this eventually, we've got you covered.</p>
+          </div>
+          <div class="faq">
+            <h3>How do I get my training plan?</h3>
+            <p>Once you have paid for the Running Plan Generator, you will be able to generate your training plans. Simply, come back here, click the login button, and enter the email address you used when purchasing the generator.</p>
+          </div>
+          <div class="faq">
+            <h3>How long can I use the generator for?</h3>
+            <p>You can generate as many running plans as you want for 2 weeks from the date of purchase. After that, any saved plans will remain on your computer, but you will not be able to create new ones.</p>
+          </div>
+          <div class="faq">
+            <h3>Can I save my plan?</h3>
+            <p>You can save one plan for each distance - 5km, 10km, half-marathon, marathon.</p>
+            <p>Notes:</p>
+              <ul>
+                <li>The plans are saved on the device you generate it. For example, if you are in work and save a plan on your computer, it will only be available as a saved plan on that computer. You can, however, save another plan on another computer if you wish.</li>
+                <li>If you clear your "Site Data" in your browser, this will remove those plans. For this reason, it is important that you copy it to a document or spreadsheet (and, preferably, print it out).</li>
+              </ul>
+          </div>
+          <div class="faq">
+            <h3>Can I edit my plan?</h3>
+            <p>The plan is not editable, but you can generate a new one if you wish. Once you copy the contents of your plan to a document or spreadsheet, you can then edit it as much as you like.</p>
+          </div>
+          <div class="faq">
+            <h3>Can I print my plan?</h3>
+            <p>Yes, you can print your plan by clicking on the "Print" button. You will not see this button until you have completed a purchase and logged in.</p>
+          </div>
+          <div class="faq">
+            <h3>Why is there no pace for each run?</h3>
+            <p>We have created this running plan generator to plan your runs, but not how fast you should run for each. Each person has different goals, and should set their pace accordingly.</p>
+            <p>If you are aiming to run a sub 20-minute 5k, we'd suggest your intervals are at a pace of less than 4 minutes per km. If you wish to run a marathon in under 4 hours, we suggest your intervals will be less than 5 minutes per km. And so on ...</p>
+          </div>
+          <div class="faq">
+            <h3>What about if I train by heartrate rather than pace?</h3>
+            <p>We have taken the same approach to heartrate running as pace running. Easy runs and longs runs should be in Zone 2, endurance runs will be zones 3 to 4, and intervals will be zone 4 to 5. However, it's up to you to be as flexible or strict as you wish.</p>
+          </div>
+          <div class="faq">
+            <h3>How much does the running training plan generator cost?</h3>
+            <p>The Running Plan Generator costs €29. Once you purchase it, you can generate as many training plans as you like.</p>
+          </div>
+          <div class="faq">
+            <h3>How do I pay for the Running Plan Generator?</h3>
+            <p>You can pay for the Running Plan Generator using a credit card. We use Stripe to process payments, so your credit card details are safe and secure. They are never stored by us and we will never have any access to them.</p>
+          </div>
+          <div class="faq">
+            <h3>Is this a subscription service?</h3>
+            <p>No. You pay for your plan once and use it. If you like it, and wish to come back some other time to purchase again, that would be great.</p>
+          </div>
+          <div class="faq">
+            <h3>Can I get a refund?</h3>
+            <p>Sorry, we are not offering refunds. We have priced the running plan generator as low as possible to anyone can afford it. We also believe the are enough features for you to test before making a purchase to make sure you are happy with it.</p>
+          </div>
+          <div class="faq">
+            <h3>What if I have a question that is not answered here?</h3>
+            <p>Send us an email at <a href="mailto:mark@mark.ie">mark@mark.ie</a> and we'll get back to you as soon as we can.</p>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+    <!-- End FAQs -->
+
+  </main>
+
+  <footer class="footer landmark">
+    <div class="container">
+      <div class="padding-horizontal">
+        <div class="footer__inner landmark__inner">
+          <div class="landmark__actions">
+            <a class="action-item action-item--pulse action-item--pulse-delay action-item--purchase" href="https://markie.eo.page/xrpd5"
+              target="_blank">
+              <span class="action-item__text">Join Mailing List</span>
+            </a>
+          </div>
+          <div class="footer__credits">
+            <p>Created by <a href="https://mark.ie">Mark Conroy</a></p>
+          </div>
+          <div class="landmark__branding">
+            <p class="landmark__title">Running<br> Plan<br> Generator</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="dialog">
+    <div class="dialog__inner">
+      <div class="dialog__actions">
+        <button class="action-item dialog__close" autofocus>Close</button>
+      </div>
+      <div class="dialog__content"></div>
+    </div>
+  </dialog>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
