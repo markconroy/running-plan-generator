@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Running Plan Generator",
+    "short_name": "RPG",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
