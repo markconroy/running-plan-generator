@@ -189,9 +189,9 @@ select {
   width: var(--spacing);
   height: var(--spacing);
   margin-right: var(--spacing-half);
-  path {
-    fill: var(--color-text-light);
-  }
+}
+.action-item__icon > svg path {
+  fill: var(--color-text-light);
 }
 
 .action-item:hover svg path,

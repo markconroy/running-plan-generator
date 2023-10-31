@@ -1,0 +1,17 @@
+/* print stylesheet */
+@media print {
+  /* style sheet for print goes here */
+  header .landmark__actions,
+  footer,
+  .choices,
+  .run-types {
+    display: none !important;
+  }
+  .training-plan {
+    display: block !important;
+    max-height: none !important;
+  }
+  .container {
+    max-width: none !important;
+  }
+}
