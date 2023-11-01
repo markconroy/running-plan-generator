@@ -412,6 +412,10 @@ select {
   width: 100px;
 }
 
+.choices + P {
+  margin-top: var(--spacing-double);
+}
+
 .run-types {
   background-color: var(--color-theme-2);
   padding: var(--spacing);
