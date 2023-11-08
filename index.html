@@ -32,6 +32,8 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="print.css">
   <title>Running Plan Generator - create unlimited 5k, 10, half-marathon, and marathon running plans</title>
 </head>
 
@@ -55,12 +57,6 @@
               </span>
               <span class="action-item__text">Buy Now</span>
             </a>
-            <button class="action-item action-item--pulse action-item--login">
-              <span class="action-item__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
-              </span>
-              <span class="action-item__text">Login</span>
-            </button>
           </div>
         </div>
       </div>
@@ -75,6 +71,7 @@
         <div class="saved-plans">
           <h2>Saved Plans</h2>
           <div class="saved-plans__content">
+            <p>You have no saved plans, yet!</p>
           </div>
         </div>
       </div>
@@ -278,7 +275,7 @@
           </div>
           <div class="faq">
             <h3>How do I get my training plan?</h3>
-            <p>Once you have paid for the Running Plan Generator, you will be able to generate your training plans. Simply, come back here, click the login button, and enter the email address you used when purchasing the generator.</p>
+            <p>Once you have paid for the Running Plan Generator, you will be redirected to the running plan generator.</p>
           </div>
           <div class="faq">
             <h3>How long can I use the generator for?</h3>
@@ -352,12 +349,6 @@
               </span>
               <span class="action-item__text">Buy Now</span>
             </a>
-            <button class="action-item action-item--pulse action-item--login">
-              <span class="action-item__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
-              </span>
-              <span class="action-item__text">Login</span>
-            </button>
           </div>
           <div class="footer__credits">
             <p>Created by <a href="https://mark.ie">Mark Conroy</a></p>
@@ -379,7 +370,7 @@
     </div>
   </dialog>
 
-  <script type="module" src="/main.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
