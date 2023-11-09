@@ -137,6 +137,25 @@ select {
   font: inherit;
 }
 
+/* Main Nav */
+.main-nav {
+  border-bottom: var(--border);
+  padding: var(--spacing);
+  background-color: var(--color-theme-2);
+}
+.main-nav ul {
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  justify-content: end;
+  gap: var(--spacing);
+}
+
+.main-nav a {
+  color: var(--color-text);
+}
+
 /* Action Items */
 .action-item {
   position: relative;
