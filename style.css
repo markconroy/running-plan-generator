@@ -315,6 +315,10 @@ select {
   border-top: var(--border);
 }
 
+.footer__credits {
+  text-align: center;
+}
+
 .footer__credits p {
   margin-bottom: 0;
 }

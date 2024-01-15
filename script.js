@@ -206,11 +206,114 @@ function closeDialog() {
   });
 }
 
+// This function handles the options for save/copy/print.
+function handleHeaderOptions() {
+  const saveButton = document.querySelector(".action-item--save");
+  const copyButton = document.querySelector(".action-item--copy");
+  const printButton = document.querySelector(".action-item--print");
+  if (saveButton) {
+    saveButton.addEventListener("click", () => {
+      const trainingPlan = document.querySelector(".training-plan");
+      const trainingPlanText = trainingPlan.innerHTML;
+      const distanceSelect = document.querySelector("#distance");
+      const distanceValue = distanceSelect.value;
+      const trainingPlans =
+        JSON.parse(localStorage.getItem("trainingPlans")) || [];
+      const existingIndex = trainingPlans.findIndex(
+        (plan) => plan.distance === distanceValue
+      );
+      if (existingIndex !== -1) {
+        trainingPlans[existingIndex].plan = trainingPlanText;
+      } else {
+        trainingPlans.push({
+          distance: distanceValue,
+          plan: trainingPlanText,
+        });
+      }
+      localStorage.setItem("trainingPlans", JSON.stringify(trainingPlans));
+      handleSavedPlans();
+    });
+  }
+
+  if (copyButton) {
+    const copyButtons = document.querySelectorAll(".action-item--copy");
+    copyButtons.forEach((copyButton) => {
+      copyButton.addEventListener("click", () => {
+        const trainingPlan = document.querySelector(".training-plan");
+        let trainingPlanText = trainingPlan.innerHTML;
+
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = trainingPlanText;
+        const links = tempDiv.querySelectorAll("a");
+        links.forEach((link) => {
+          const textNode = document.createTextNode(link.textContent);
+          link.replaceWith(textNode);
+        });
+        trainingPlanText = tempDiv.innerHTML;
+        navigator.clipboard.writeText(trainingPlanText);
+        dialogContent.innerHTML = `
+                  <p>Your training plan has been copied to your clipboard.</p>
+                  <p>You can now paste it into a document or spreadsheet such as Microsoft Word or Excel.</p>
+                `;
+        dialog.showModal();
+      });
+    });
+  }
+  if (printButton) {
+    const printButtons = document.querySelectorAll(".action-item--print");
+    printButtons.forEach((printButton) => {
+      printButton.addEventListener("click", () => {
+        window.print();
+      });
+    });
+  }
+}
+
+function handleSavedPlans() {
+  const savedPlans = JSON.parse(localStorage.getItem("trainingPlans")) || [];
+  if (savedPlans.length > 0) {
+    savedPlansContainer.innerHTML = `
+        <p>Click on any of the plans below to load it into the running plan table.</p>
+        <ul class="saved-plans__list">
+        ${savedPlans
+          .map(
+            (plan) => `
+              <li class="saved-plans__item">
+                <button aria-label="Load the ${
+                  plan.distance
+                } plan in to the running plan table." class="action-item action-item--ghost saved-plans__action">${
+              plan.distance.charAt(0).toUpperCase() + plan.distance.slice(1)
+            }</button>
+              </li>
+            `
+          )
+          .join("")}
+            </ul>
+            `;
+    const savedPlansActions = document.querySelectorAll(
+      ".saved-plans__item button"
+    );
+    // If you click on any of the saved plans, replace the table with that plan.
+    savedPlansActions.forEach((action, index) => {
+      action.addEventListener("click", () => {
+        const savedPlan = savedPlans[index].plan;
+        table.innerHTML = savedPlan;
+      });
+    });
+  } else {
+    savedPlansContainer.innerHTML = `
+          <p>You have no saved plans.</p>
+        `;
+  }
+}
+
 function handleCreatePlan() {
   clearPlan();
   handleDistanceChange();
+  handleHeaderOptions();
   runningPlanDialog();
   closeDialog();
+  handleSavedPlans();
   distanceValue = distanceSelect.value;
 
   for (let i = 1; i <= numberOfWeeksToTrain; i++) {
@@ -367,41 +470,7 @@ function handleCreatePlan() {
       <td headers="training-plan-day-7" class="training-plan__cell training-plan__cell--day-7">Race Day!</td>
     `;
   tableBody.appendChild(lastRow);
-
-  // Remove every row except the last 4 rows.
-  const rows = document.querySelectorAll(".training-plan__row");
-  const rowsArray = Array.from(rows);
-  const rowsArrayReversed = rowsArray.reverse();
-  rowsArrayReversed.forEach((row, index) => {
-    if (index > rowsArrayReversed.length - 5) {
-      return;
-    }
-    setTimeout(() => {
-      row.classList.add("training-plan__row--remove");
-      setTimeout(() => {
-        row.remove();
-      }, 300);
-    }, 1000 * index);
-  });
-
-  // Add a CTA to the table to ask people to purchase.
-  const toSeeFullPlan = document.createElement("div");
-  toSeeFullPlan.classList.add("full-plan");
-  const fullPlan = document.querySelector(".full-plan");
-  toSeeFullPlan.innerHTML = `
-          <p>You must purchase the training plan to see the full plan and your saved plans.</p>
-          <p class="full-plan__actions">
-            <a class="action-item" href="https://buy.stripe.com/14k28p8vN17x2YM146">Buy Now (€29)</a>
-          </p>
-        `;
-  if (!fullPlan) {
-    table.insertAdjacentElement("afterend", toSeeFullPlan);
-  }
 }
 
-handleDistanceChange();
 handleCreatePlan();
-runningPlanDialog();
-closeDialog();
-
 createPlanButton.addEventListener("click", handleCreatePlan);
